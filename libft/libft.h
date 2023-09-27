@@ -6,7 +6,7 @@
 /*   By: mnaschbe <mnaschbe@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 13:32:27 by mnaschbe          #+#    #+#             */
-/*   Updated: 2023/09/25 13:33:42 by mnaschbe         ###   ########.fr       */
+/*   Updated: 2023/09/27 15:59:45 by mnaschbe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <stddef.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 5000
@@ -48,7 +49,7 @@ int				ft_iterative_power(int nb, int power);
 int				ft_recursive_factorial(int nb);
 int				ft_iterative_factorial(int nb);
 void			ft_putnbr_base(int nbr, char *base);
-int				ft_atoi(char *str);
+int				ft_atoi(const char *str);
 void			ft_putnbr(int nb);
 void			ft_putstr(char *str);
 char			*ft_strstr(char *str, char *to_find);
@@ -64,7 +65,7 @@ int				ft_isalpha(char c);
 int				ft_isprint(char c);
 int				ft_isascii(char c);
 int				ft_isdigit(char c);
-int				ft_strlen(char *str);
+size_t			ft_strlen(const char *s);
 int				ft_topper(char c);
 int				ft_tolower(char c);
 char			*ft_strchr(const char *str, int c);
